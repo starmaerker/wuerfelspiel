@@ -5,6 +5,7 @@
         <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" type="text/css" href="../static/css/styles.css" />
 
         {% block styles %}
             <!-- Bootstrap CSS -->
@@ -15,7 +16,13 @@
         {% endblock %}
     </head>
     <body>
-        <h1>Würfelspiel</h1>
+        <div class="container">
+            <h1 class="text-center">Würfelspiel</h1>
+            <img src={{ url }} id="cube">
+            <div class="col text-center">
+                <button type="button"class="btn btn-info">Test</button>
+            </div>
+        </div>
         {% block scripts %}
             {{ bootstrap.load_js() }}
         {% endblock %}

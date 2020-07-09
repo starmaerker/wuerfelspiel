@@ -1,3 +1,11 @@
-h1 {
-    text-align: center;
+#cube {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+    width: 35%;
+}
+
+button {
+    margin-top: 2rem !important;
 }
