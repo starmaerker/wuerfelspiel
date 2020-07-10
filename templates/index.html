@@ -20,11 +20,27 @@
             <h1 class="text-center">Würfelspiel</h1>
             <img src={{ url }} id="cube">
             <div class="col text-center">
-                <button type="button"class="btn-lg btn-info" onClick="window.location.reload();">Würfeln</button>
+                <button type="button"class="btn-lg btn-info" onClick="playSound();">Würfeln</button>
             </div>
         </div>
         {% block scripts %}
             {{ bootstrap.load_js() }}
         {% endblock %}
+        <script>
+            const sound = new Audio();
+            song = "../static/Wuerfeln.wav";
+
+            const sleep = (milliseconds) => {
+                return new Promise((resolve) => setTimeout(resolve, milliseconds));
+            };
+
+            function playSound() {
+                sound.src = song;
+                sound.play();
+                sleep(1500).then(() => {
+                    location.reload();
+                });
+            }
+        </script>
     </body>
 </html>
